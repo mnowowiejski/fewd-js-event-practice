@@ -1,32 +1,32 @@
 (function () {
-  const buttonParent = document.querySelector('div');
-  const buttonItems = buttonParent.querySelectorAll('button');
+    const buttons = document.querySelectorAll('button');
+    const firstButton = buttons[0];
+    const secondButton = buttons[1];
+    const thirdButton = buttons [2];
 
 
-  buttonParent.addEventListener('click', setActiveColor);
+    firstButton.addEventListener('click', setActiveColor);
+    secondButton.addEventListener('click', changeLabel);
+    thirdButton.addEventListener('click', buttonReset);
 
 
   function setActiveColor (e) {
-    for (const buttonItem of buttonItems) {
-      buttonItem.classList.toggle('button-danger');
+     {
+      firstButton.classList.toggle('button-danger');
     }
-
-
     e.stopPropagation();}
-})();
-//Part 2
-(function () {
-  const buttonParent = document.querySelector('div');
-  const buttonItems = buttonParent.querySelectorAll('button');
 
-
-  buttonParent.addEventListener('click', changeText);
-
-
-  function changeText (e) {
-    for (const buttonItem of buttonItems) {
-      buttonItem.innerHTML = "you clicked me"
+  function changeLabel (e) {
+     {
+      secondButton.innerHTML='You Clicked Me!';
     }
-
     e.stopPropagation();}
+
+  function buttonReset(e) {
+     {
+      secondButton.innerHTML='button two';
+    }
+    e.stopPropagation();}
+
+
 })();
