@@ -7,9 +7,9 @@
 
   function setActiveColor (e) {
     for (const buttonItem of buttonItems) {
-      buttonItem.classList.remove('button-xl');
+      buttonItem.classList.toggle('button-danger');
     }
 
-    e.target.classList.add('button-danger');
+    
     e.stopPropagation();}
 })();
